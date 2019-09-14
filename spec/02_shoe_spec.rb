@@ -1,3 +1,17 @@
+class Shoe
+  attr_accessor :color, :size, :material, :condition
+  def initialize(brand)
+    @brand = brand
+  end
+  
+  def cobble=(old)
+    self.condition = new
+    puts "Your shoe is good as new"
+  end
+end
+
+
+
 describe 'Shoe' do
   let(:shoe) { Shoe.new("Nike") }
 
@@ -11,6 +25,7 @@ describe 'Shoe' do
     it 'has a brand' do
       # When must the brand be assigned for this to work?
       expect(shoe.brand).to eq("Nike")
+     
     end
 
     it 'has a color' do
